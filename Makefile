@@ -411,6 +411,9 @@ KBUILD_CFLAGS   := -Werror -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -Wno-format-security \
 		   -mcpu=cortex-a57.cortex-a53 -mtune=cortex-a57.cortex-a53 \
 		   -std=gnu89
+		   
+# arter97's optimizations
+KBUILD_CFLAGS	+= -pipe -fno-pic -O3 -march=armv8-a+crc		   
 
 #arter97`s optimizations
 KBUILD_CFLAGS   += -pipe -mno-android -fno-pic -O3 -march=armv8-a+crc
